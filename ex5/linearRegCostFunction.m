@@ -24,10 +24,13 @@ grad = zeros(size(theta));
 
 
 
+J = 1/(2*m) * (sum((sigma(X) - y)^2)) + lambda/(2*m) * (sum(theta^2));
 
 
-
-
+grad = 1/m * sum(sigma(X)-y)X
+if J -ne 0 then
+    grad += lambda/m * theta
+end
 
 
 % =========================================================================
